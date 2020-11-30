@@ -1,0 +1,108 @@
+section.FundoTelaLogin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/Projetos/leiticia/Public/img/arte/fundo_login.jpeg') center no-repeat;
+    background-size: cover;
+}
+    div.DivLogin{
+        position: absolute;
+        width: 30%;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(159, 182, 205, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+        border-width: 3px;
+        border-style: solid;;
+        border-color: black;
+    }
+        div.DivLoginLogo{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -90%);
+            text-align: center;
+        }
+            div.DivLoginLogo img{
+                height: 100%;
+                margin-top: 30px;
+            }
+        div.DivLoginForm{
+            width: 100%;
+            margin: auto;
+            min-height: 100px;
+            margin-top: 50px;
+        }
+            div.campoLogin{
+                width: 100%;
+                min-height: 50px;
+                margin-top: 20px;
+            }
+                div.campoLogin ul{
+                    list-style: none;
+                    width: 100%;
+                    text-align: center;
+                }
+                    div.campoLogin ul li{
+                        float: left;
+                        text-align: center;
+                    }
+
+/**/
+/*---------------Responsividade-----------------------------------------------*/
+/**/
+/*Extra-small*/
+@media screen and (max-width: 480px){
+    div.DivLogin{
+        width: 90%;
+        top: 55%;
+        padding: 15px;
+    }
+        div.DivLoginLogo{
+            /*width: 150px;*/
+            height: 150px;
+        }
+        div.DivLoginForm{
+            width: 100%;
+            margin: auto;
+            min-height: 100px;
+            margin-top: 50px;
+        }
+
+}
+/*Small*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    div.DivLogin{
+        width: 70%;
+    }
+        div.DivLoginLogo{
+            /*width: 150px;*/
+            height: 150px;
+        }
+    .buttonBasico{
+        width: 150px;
+        height: 50px;
+    }
+}
+/*Medium*/
+@media screen and (min-width: 769px) and (max-width: 1199px){
+    div.DivLogin{
+        width: 50%;
+    }
+        div.DivLoginLogo{
+            /*width: 150px;*/
+            height: 150px;
+        }
+}
+/*Large*/
+@media screen and (min-width: 1200px){
+
+}

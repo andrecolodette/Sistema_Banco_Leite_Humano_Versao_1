@@ -1,0 +1,17 @@
+{
+    "name": "banco_de_leite_humano/scmv",
+    "description": "Sistema para controle e gerenciamento do Banco de Leite Humano da Santa Casa de Misericodia de Vitoria",
+    "authors": [
+        {
+            "name": "Andre L Colodette",
+            "email": "andre.colodette@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "App\\":"../App/",
+            "Src\\":"../Src/"
+        }
+    }
+}

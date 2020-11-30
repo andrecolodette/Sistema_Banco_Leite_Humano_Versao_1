@@ -1,0 +1,85 @@
+nav.NavVertical{
+    background-color: #607B8B;
+    float: left;
+    /*width: 15%;*/
+    min-width: 250px;
+    min-height: 50px;
+}
+
+section.Corpo{
+    /*background-color: #B0E2FF;*/
+    background-color: #607B8B;
+}
+
+section.Main{
+    /*width: 85%;*/
+    width: calc(100% - 250px);
+}
+
+nav.NavVertical ul{
+    /*margin-top: 20px;*/
+}
+    nav.NavVertical li{
+        /*float:left;*/
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        padding: 5px;
+    }
+        nav.NavVertical a{
+            display:block;
+            width: 100%;
+            padding: 10px 0;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 20px;
+            color:#fff;
+        }
+            nav.NavVertical a:hover{
+                background: #666;
+            }
+
+        nav.NavVertical ul li ul{
+            background-color: #38637d;
+            overflow: hidden;
+            max-height: 0;
+            -webkit-transition: all 0.5s ease-out;
+        }
+            nav.NavVertical ul li:hover ul{
+                display: block;
+                max-height: 200px;
+            }
+            nav.NavVertical li ul a{
+
+            }
+                nav.NavVertical li ul a:hover{
+                    background: #999;
+                }
+
+
+
+/**/
+/*---------------Responsividade-----------------------------------------------*/
+/**/
+/*Extra-small*/
+@media screen and (max-width: 480px){
+    nav.NavVertical{ width: 100%; }
+    section.Main{ width: 100%; }
+    nav.NavVertical a{ font-size: 15px; }
+}
+/*Small*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    nav.NavVertical{ width: 100%; }
+    section.Main{ width: 100%; }
+    nav.NavVertical a{ font-size: 15px; }
+}
+/*Medium*/
+@media screen and (min-width: 769px) and (max-width: 1199px){
+    nav.NavVertical{ width: 100%; }
+    section.Main{ width: 100%; }
+    nav.NavVertical a{ font-size: 15px; }
+}
+/*Large*/
+@media screen and (min-width: 1200px){
+
+}

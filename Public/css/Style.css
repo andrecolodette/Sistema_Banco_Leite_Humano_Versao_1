@@ -1,0 +1,889 @@
+/**/
+/*--------------------Sistema-------------------------------------------------*/
+/**/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: Arial,sans-serif;*/
+    font-family: Calibri, Cambria;
+    font-size: 20px;
+}
+a{
+    text-decoration: none; /*Remove o efeito de link*/
+}
+
+/**/
+/*--------------------Classes Auxiliares--------------------------------------*/
+/**/
+.textCenter{
+    text-align: center;
+}
+.floatL{
+    float: left;
+}
+.marginAuto{
+    margin: auto;
+}
+.w100{
+    width: 100%;
+}
+.h100{
+    height: 100%;
+}
+.cantoRedondo{
+    border-radius: 10px;
+}
+
+/*Lagura do elemento em relação a página/tela*/
+.wp100{width: 100%}
+.wp80{width: 80%}
+.wp75{width: 75%}
+.wp70{width: 70%}
+.wp66{width: 66.66%}
+.wp60{width: 60%}
+.wp50{width: 50%}
+.wp40{width: 40%}
+.wp33{width: 33.33%}
+.wp30{width: 30%}
+.wp25{width: 25%}
+.wp20{width: 20%}
+.wp15{width: 15%}
+.wp10{width: 10%}
+.wp5{width: 5%}
+
+/*Altura Fixas*/
+.hf50{height: 50px};
+.hf100{height: 100px};
+.hf150{height: 150px};
+.hf200{height: 200px};
+.hf250{height: 250px};
+.hf300{height: 300px};
+
+/*Número de Botões/Elementos em uma lista*/
+ul.nb1 li{width: 100%; }
+ul.nb2 li{ width: 50%; }
+ul.nb3 li{width: 33.33%;}
+ul.nb4 li{width: 25%;}
+ul.nb5 li{width: 20%;}
+
+/**/
+/*--------------------Elementos Básicos---------------------------------------*/
+/**/
+.buttonBasico{
+    background: #DCDCDC;
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 46px;
+    margin: auto;
+    margin-top: 10px;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+
+    border-width: 2px;
+    border-style: solid;;
+    border-color: black;
+}
+    .buttonBasico:hover{
+        background-color: rgba(128, 128, 128, 0.5);
+    }
+
+/**/
+/*---------------Layout Básico------------------------------------------------*/
+/**/
+/*Cabeçalho*/
+header.Header{
+    background-color: #A4D3EE;
+    width: 100%;
+    height: 150px;
+    float: left;
+}
+/*Menu Horizontal Principal*/
+nav.NavPrincipal{
+    background-color: #607B8B;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+/*Mapa de Navegação*/
+div.NavMap{
+    background-color: #A4D3EE;
+    width: 100%;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    color: #708090;
+}
+/*Corpo do site*/
+section.Corpo{
+    background-color: #B0E2FF;
+    width: 100%;
+    /*height: 150px;*/
+    /*min-height: 4000px;*/
+    float: left;
+}
+    /*Corpo de Conteudo*/
+    section.Main{
+        background-color: #B0E2FF;
+        width: 100%;
+        /*height: 150px;*/
+        min-height: 1000px;
+        float: left;
+    }
+
+        /*Menu de Opções*/
+        nav.navMenuOpcao{
+            background-color: #607B8B;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+
+/*Rodapé*/
+footer.Footer{
+    background-color: #8DB6CD;
+    width: 100%;
+    min-height: 150px;
+    float: left;
+}
+
+/**/
+/*---------------Componentes/Elementos Básicos do Layout Básico---------------*/
+/**/
+/*Cabeçalho - Logo*/
+header.Header div.DivLogo{
+    min-width: 25%;
+    max-width: 90%;
+    height: 90%;
+    float: left;
+
+    position: relative;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 5%);
+
+    line-height: 135px;
+    align-items: center;
+}
+    img.Logo{
+        height: 100%;
+        float: left;
+        position: relative;
+    }
+    h1.Logo{
+        float: right;
+        position: relative;
+        font-size: 50px;
+        color: #FFF;
+    }
+
+/*Menu Horizontal Principal*/
+nav.NavPrincipal li{
+    float:left;
+    text-align: center;
+    list-style: none;
+}
+    nav.NavPrincipal a{
+        display:block;
+        width: 100%;
+        padding: 10px 0;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 20px;
+        color:#fff;
+    }
+    nav.NavPrincipal a:hover{
+        background: #666;
+    }
+
+/*Mapa de Navegação*/
+div.NavMap a{
+    padding: 15px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #708090;
+}
+
+/*Menu de Opções*/
+nav.navMenuOpcao li{
+    float:left;
+    text-align: center;
+    list-style: none;
+    background-color: #607B8B;
+}
+    nav.navMenuOpcao a{
+        display:block;
+        width: 100%;
+        padding: 10px 0;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 20px;
+        color:#fff;
+    }
+        nav.navMenuOpcao a:hover{
+            background: #666;
+        }
+
+    /*Submenu - Opçoes */
+    nav.navMenuOpcao ul li ul{
+        /*background-color: #38637d;*/
+        background-color: #607B8B;
+        overflow: hidden;
+        max-height: 0;
+        -webkit-transition: all 0.5s ease-out;
+        color: #FFF;
+    }
+        nav.navMenuOpcao ul li:hover ul{
+            display: block;
+            max-height: 700px;
+            padding: 5px;
+        }
+        nav.navMenuOpcao ul li:hover ul li{
+            background-color: #38637d;
+            float: left;
+            width: 100%;
+            height: 40px;
+            padding: 5px 0 5px 0;
+            line-height: 30px;
+        }
+            nav.navMenuOpcao ul li:hover ul li:hover{
+                background-color: #999;
+            }
+            nav.navMenuOpcao ul li:hover ul li div.divOpcaoLista{
+                width: 70%;
+                height: 100%;
+                float: left;
+                text-align: center;
+                text-align: right;
+                padding-right: 7px;
+            }
+            nav.navMenuOpcao ul li:hover ul li div.divOpcaoCheck{
+                width: 30%;
+                height: 100%;
+                float: left;
+                text-align: center;
+                text-align: right;
+                padding-right: 7px;
+            }
+            nav.navMenuOpcao ul li:hover ul li .numRegistro{
+                width: 60px;
+                height: 30px;
+                float: left;
+
+                position: relative;
+                float: right;
+                right: 50%;
+                margin-left: 50%;
+                transform: translate(50%,0);
+            }
+            nav.navMenuOpcao ul li:hover ul li .colConfig{
+                width: 30px;
+                height: 30px;
+                float: left;
+
+                position: relative;
+                float: right;
+                right: 50%;
+                margin-left: 50%;
+                transform: translate(50%,0);
+            }
+
+            nav.navMenuOpcao ul li:hover ul li.buttonColConfig{
+                height: 50px;
+                line-height: 40px;
+            }
+                nav.navMenuOpcao ul li:hover ul li .buttonBasico{
+                    width: 100px;
+                    height: 40px;
+                    line-height: 30px;
+                    margin-top: 0;
+                }
+
+/*Pesquisar registro!*/
+nav.navMenuOpcao ul li.listPesquisarRegistro a{
+    padding: 7px;
+}
+    nav.navMenuOpcao ul li.listPesquisarRegistro a div{
+        width: 100%;
+        height: 100%;
+    }
+    nav.navMenuOpcao ul li.listPesquisarRegistro .inputListPesquisar{
+        width: calc(100% - 100px);
+        border-radius: 5px;
+    }
+    nav.navMenuOpcao ul li.listPesquisarRegistro .buttonListPesquisar{
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 5px;
+    }
+
+nav.navMenuOpcao ul li.menuListaFiltro div{
+    float: left;
+}
+    nav.navMenuOpcao ul li.menuListaFiltro div .campoListFiltro{
+        width: 90%;
+        margin: auto;
+    }
+
+/*Pesquisar data*/
+nav.navMenuOpcao ul li.listPesquisarData a div{
+    width: 100%;
+    height: 100%;
+}
+    nav.navMenuOpcao ul li.listPesquisarData a div input{
+        width: 40%;
+    }
+
+/*Conteudo Rodapé*/
+div.DivRodapeConteudo{
+    width: 33.33%;
+    min-height: 50px;
+    float: left;
+    padding: 20px;
+}
+    div.DivRodapeConteudo p{
+        width: 90%;
+        min-height: 50px;
+        margin: auto;
+
+        font-size: 18px;
+        color: black;
+        text-align: justify;
+    }
+        div.DivRodapeConteudo ul{
+            width: 90%;
+            margin: auto;
+        }
+            div.DivRodapeConteudo ul li{
+                color: black;
+                font-size: 18px;
+            }
+            div.DivRodapeConteudo ul li a{
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+            }
+    div.imgRodape{
+        width: 90%;
+        min-height: 50px;
+        margin: auto;
+        text-align: center;
+    }
+        div.DivRodapeConteudo div.imgRodape img{
+            width: 40%;
+        }
+
+
+/**/
+/*---------------Área e posição de Conteúdos----------------------------------*/
+/**/
+/*Div para notificação de alerta*/
+div.DivMensagemAlerta{
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+/*Para posicionar os diferentes conteudos em sequencia*/
+div.DivPosicaoConteudo{
+    width: 100%;
+    /*height: 150px;*/
+    min-height: 50px;
+    float: left;
+    margin-top: 25px;
+}
+    /*Tamanho e centralização da área conteudo*/
+    div.DivAreaConteudo{
+        width: 90%;
+        /*height: 150px;*/
+        min-height: 50px;
+        margin: auto;
+    }
+        .conteudoCor{
+            background-color: #9FB6CD;
+        }
+
+/**/
+/*---------------Página de Texto----------------------------------------------*/
+/**/
+fieldset.campoDivisaoTexto{
+    width: calc(100% - 30px);
+    position: relative;
+    margin: 15px;
+    top: 15px;
+    min-height: 100px;
+    padding: 10px;
+}
+    fieldset.campoDivisaoTexto div{
+        width: 100%;
+        float: left;
+        padding: 5px;
+    }
+        fieldset.campoDivisaoTexto div div{
+            width: 50%;
+            float: left;
+            padding: 10px;
+        }
+            fieldset.campoDivisaoTexto div div p{
+                font-size: 20px;
+                color: black;
+                text-align: justify;
+                line-height: 30px;
+                width: 100%;
+            }
+p.pagTexto{
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+    line-height: 30px;
+
+    width: 100%;
+}
+    .fs50{ font-size: 50%; }
+    .fs150{ font-size: 150%; }
+    .fs200{ font-size: 200%; }
+
+/**/
+/*---------------Tipos de Conteúdos-------------------------------------------*/
+/**/
+
+/*---Página Básica de Conteúdo/Texto*/
+.h50{
+    height: 50px;
+
+}
+.h100{
+    height: 100px;
+    min-height: 100px;
+}
+.h250{
+    height: 250px;
+    min-height: 250px;
+}
+.h500{
+    height: 500px;
+    min-height: 500px;
+}
+.h1000{
+    min-height: 1000px;
+}
+
+/*---Postagens*/
+/*Divisão do tamanho destinado para cada postagem*/
+div.divisaoPostagem{
+    /*width: 33.33%;
+    min-height: 300px;*/
+    float: left;
+    margin-top: 10px;
+    padding: 10px;
+}
+    div.myPostagem{
+        background: #9FB6CD;
+        width: 500px;
+        max-width: 100%;
+        height: 500px;
+        margin: auto;
+    }
+        div.imgPostagem{
+            width: 100%;
+            height: 40%; /*200px;*/
+            float: left;
+        }
+            div.imgPostagem img{
+                width: 100%;
+                height: 100%;
+            }
+        div.ConteudoPostagem{
+            width: 100%;
+            height: 60%; /*300px;*/
+            float: left;
+            padding: 20px;
+        }
+            div.ConteudoPostagem header{
+                width: 100%;
+                height: 25%;
+                float: left;
+            }
+                div.ConteudoPostagem header h2{
+                    width: 100%;
+                    margin: auto;
+                    text-align: center;
+                    margin-top: 10px;
+                    font-size: 125%;
+                }
+            div.ConteudoPostagem section{
+                width: 100%;
+                height: 50%;
+                float: left;
+            }
+                div.ConteudoPostagem section p{
+                    text-align: justify;
+                }
+            div.ConteudoPostagem footer{
+                width: 100%;
+                height: 25%;
+                float: left;
+                text-align: center;
+            }
+
+/*---Formulario*/
+div.divForm{
+    background-color: #9FB6CD;
+    /*width: 100%;*/
+    min-height: 270px;
+    margin: auto;
+}
+    div.divFormCorpo{
+        background: #9FB6CD;
+        width: 100%;
+        min-height: 200px;
+        float: left;
+    }
+        div.divCamposForm{
+            float: left;
+            height: 100px;
+            padding: 10px;
+        }
+            label.labelForm{
+                width: 100%;
+                height: 100%;
+                float: left;
+            }
+                .campoForm{
+                    width: 100%;
+                    height: 40px;
+                    float: left;
+                    border-radius: 10px;
+                    padding-left: 10px;
+                    padding-left: 20px;
+                }
+                    /*
+                    .campoForm option{
+                        width: 100%;
+                        height: 40px;
+                        float: left;
+                        padding-left: 10px;
+                        padding-left: 20px;
+                        line-height: 40px;
+                    }*/
+                textarea.campoForm{
+                    width: 100%;
+                    height: 80%;
+                    float: left;
+                    border-radius: 10px;
+                    padding: 10px;
+                    text-align: justify;
+                }
+                label.labelFormMarcar{
+                    width: 100%;
+                    height: 20px;
+                    float: left;
+                    /*font-size: 25px;
+                    /*text-align: center;*/
+                }
+                label.campoMarcar{
+                    float: left;
+                    padding: 10px;
+                }
+                    label.campoMarcar input{
+                        float: left;
+                        height: 30px;
+                        width: 30px;
+                        position: absolute;
+                    }
+                    label.campoMarcar p{
+                        margin-left: 40px;
+                    }
+
+    div.divFormBotoes{
+        background: #9FB6CD;
+        background: #95acc2;
+        background: #8aa1b8;
+        width: 100%;
+        height: 70px;
+        float: left;
+    }
+        ul.actions{
+            margin: auto;
+            list-style: none;
+            width: 50%;
+        }
+            ul.actions li{
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+    div.divFormColuna{
+        height: 100%;
+        float: left;
+    }
+    div.divFormImgPrevia{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+        div.divFormImgPrevia img{
+            width: 100%;
+            height: 100%;
+
+            border-width: 2px;
+            border-style: solid;;
+            border-color: black;
+        }
+
+/*--Listagem/Tabela*/
+img.imgTabelaListagem{
+    height: 70px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+div.tabelaRolagem{
+    width: 100%;
+    margin: auto;
+    overflow-x: auto;
+    padding: 10px;
+}
+table.tableListagem{
+    margin: auto;
+    text-align: center;
+    min-width: 100%;
+    width: 1000px;
+    max-width: 1000px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+    /*Colunas*/
+    table.tableListagem col{min-width: 100px;}
+    table.tableListagem col.colN{width: 50px;}
+    table.tableListagem col.colAcaoes{}
+    /*Tamanho da Coluna em Relação ao Número de Botões -> botão 50px, expassamento 5px*/
+    table.tableListagem col.nb1{width: 60px;}
+    table.tableListagem col.nb2{width: 115px;}
+    table.tableListagem col.nb3{width: 170px;}
+    table.tableListagem col.nb4{width: 225px;}
+    table.tableListagem col.nb5{width: 280px;}
+
+    table.tableListagem thead{
+        background: #607B8B;
+    }
+    table.tableListagem tbody{
+        background: #9FB6CD;
+    }
+
+    table.tableListagem tr{
+        height: 40px;
+        line-height: 40px;
+        padding: 10px;
+    }
+    /*Efeito zebra entre a linhas*/
+        table.tableListagem tbody tr:nth-child(odd) {
+            background-color: ;
+        }
+        table.tableListagem tbody tr:nth-child(even) {
+            background-color: #B0C4DE;
+        }
+
+    ul.acoes{
+        margin: auto;
+        list-style: none;
+        width: 100%;
+    }
+        ul.acoes li{
+            float: left;
+            text-align: center;
+        }
+            .buttonAcao{
+                width: 50px;
+                height: 30px;
+                border-radius: 10px;
+                line-height: 26px;
+                margin-top: 0;
+            }
+                .iconAcao{
+                    vertical-align: middle;
+                }
+
+div.divPaginacao{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    padding: 5px;
+}
+    div.divPaginacao ul{
+        max-width: 500px;
+        margin: auto;
+        list-style: none;
+    }
+        div.divPaginacao ul li{
+            width: 20%;
+            float: left;
+            text-align: center;
+            font-size: 20px;
+        }
+            div.divPaginacao ul li a{
+                display: block;
+                width: 90%;
+                margin: auto;
+                color: black;
+                text-decoration: none;
+            }
+                div.divPaginacao ul li a:hover{
+                    background-color: rgba(128, 128, 128, 0.5);
+                }
+            div.divPaginacao ul li ul{
+                width: 100%;
+            }
+                div.divPaginacao ul li ul li{
+                    width: 50%;
+                    float: left;
+                }
+                    div.divPaginacao ul li ul li input{
+                        width: 50px;
+                        margin: auto;
+                        text-align: center;
+                        border-radius: 5px;
+                    }
+
+/**/
+/*---------------Responsividade-----------------------------------------------*/
+/**/
+/*Extra-small*/
+@media screen and (max-width: 480px){
+    /*Cabeçalho*/
+    header.Header div.DivLogo{width: 90%;}
+    h1.Logo{font-size: 50px;}
+    /*Menu Principal*/
+    nav.NavPrincipal a{font-size: 15px;}
+    /*Menu de Opções*/
+    nav.navMenuOpcao ul li{width: 100%;}/*Rever isso!*/
+    nav.navMenuOpcao ul li:hover ul li .buttonBasico{width: 100px;}
+    /*Rodapé*/
+    div.DivRodapeConteudo{width: 100%;}
+    /*Ações do Formulário*/
+    ul.actions{width: 100%;}
+    /*Botões*/
+    .buttonBasico{width: 100px; height: 30px; line-height: 26px; font-size: 15px;}
+    .buttonAcao{width: 50px; height: 30px;} /*Tela/Tabela Listagem*/
+    /*Paginação*/
+    div.divPaginacao ul{width: 100%;}
+    div.divPaginacao ul li.liPagListaRecursividade1{width: 15%;}
+    div.divPaginacao ul li.liPagListaRecursividade2{width: 40%;}
+    /*Formulario*/
+    div.divForm{width: 100%;}
+    div.divFormColuna{width: 100%;}
+    div.divCamposForm{width: 100%;}
+    div.divFormImgPrevia{height: 150px,}
+    /*Postagem*/
+    div.divisaoPostagem{width: 100%;}
+    div.myPostagem{width: 300px; max-width: 100%; height: 350px;}
+    div.imgPostagem{height: 30%;}
+    div.ConteudoPostagem{height: 70%; padding: 10px}
+    div.ConteudoPostagem header{height: 20%;}
+    div.ConteudoPostagem header h2{font-size: 80%; margin-top: 0;}
+    div.ConteudoPostagem section{height: 60%;}
+    div.ConteudoPostagem section p{font-size: 80%;}
+    div.ConteudoPostagem footer{height: 20%;}
+    /*Visualização*/
+    fieldset.campoDivisaoTexto div div{ width: 100%; }
+
+}
+
+
+/*Small*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    /*Cabeçalho*/
+    header.Header div.DivLogo{min-width: 50%; max-width: 90%; }
+    h1.Logo{font-size: 70px;}
+    /*Menu Principal*/
+    nav.NavPrincipal a{font-size: 15px;}
+    /*Menu de Opções*/
+    nav.navMenuOpcao ul li{width: 100%;}/*Rever isso!*/
+    nav.navMenuOpcao ul li:hover ul li .buttonBasico{width: 100px;}
+    /*Rodapé*/
+    div.DivRodapeConteudo{width: 100%;}
+    /*Ações do Formulário*/
+    ul.actions{width: 100%;}
+    /*Botões*/
+    .buttonBasico{width: 100px; height: 30px; line-height: 26px; font-size: 15px;}
+    .buttonAcao{width: 50px; height: 30px;} /*Tela/Tabela Listagem*/
+    /*Paginação*/
+    div.divPaginacao ul{width: 100%;}
+    div.divPaginacao ul li.liPagListaRecursividade1{width: 15%;}
+    div.divPaginacao ul li.liPagListaRecursividade2{width: 40%;}
+    /*Formulario*/
+    div.divForm{width: 100%;}
+    div.divFormColuna{width: 100%;}
+    div.divCamposForm{width: 100%;}
+    div.divFormImgPrevia{height: 150px,}
+    /*Postagem*/
+    div.divisaoPostagem{width: 100%;}
+    div.myPostagem{width: 300px; max-width: 100%; height: 350px;}
+    div.imgPostagem{height: 30%;}
+    div.ConteudoPostagem{height: 70%; padding: 10px}
+    div.ConteudoPostagem header{height: 20%;}
+    div.ConteudoPostagem header h2{font-size: 80%; margin-top: 0;}
+    div.ConteudoPostagem section{height: 60%;}
+    div.ConteudoPostagem section p{font-size: 80%;}
+    div.ConteudoPostagem footer{height: 20%;}
+    /*Visualização*/
+    fieldset.campoDivisaoTexto div div{ width: 100%; }
+
+}
+
+
+/*Medium*/
+@media screen and (min-width: 769px) and (max-width: 1199px){
+    /*Cabeçalho*/
+    header.Header div.DivLogo{min-width: 30%; max-width: 90%;}
+    h1.Logo{font-size: 80px;}
+    /*Menu Principal*/
+    nav.NavPrincipal a{font-size: 15px;}
+    /*Menu de Opções*/
+    nav.navMenuOpcao ul li{width: 100%;}/*Rever isso!*/
+    nav.navMenuOpcao ul li:hover ul li .buttonBasico{width: 100px;}
+    /*Rodapé*/
+    div.DivRodapeConteudo{width: 100%;}
+    /*Ações do Formulário*/
+    ul.actions{width: 100%;}
+    /*Botões*/
+    .buttonBasico{width: 100px; height: 30px; line-height: 26px; font-size: 15px;}
+    .buttonAcao{width: 50px; height: 30px;} /*Tela/Tabela Listagem*/
+    /*Paginação*/
+    div.divPaginacao ul{width: 100%;}
+    div.divPaginacao ul li.liPagListaRecursividade1{width: 15%;}
+    div.divPaginacao ul li.liPagListaRecursividade2{width: 40%;}
+    /*Formulario*/
+    div.divForm{width: 100%;}
+    div.divFormColuna{width: 100%;}
+    div.divCamposForm{width: 100%;}
+    div.divFormImgPrevia{height: 150px,}
+    /*Postagem*/
+    div.divisaoPostagem{width: 100%;}
+    div.myPostagem{width: 300px; max-width: 100%; height: 350px;}
+    div.imgPostagem{height: 30%;}
+    div.ConteudoPostagem{height: 70%; padding: 10px}
+    div.ConteudoPostagem header{height: 20%;}
+    div.ConteudoPostagem header h2{font-size: 80%; margin-top: 0;}
+    div.ConteudoPostagem section{height: 60%;}
+    div.ConteudoPostagem section p{font-size: 80%;}
+    div.ConteudoPostagem footer{height: 20%;}
+    /*Visualização*/
+    fieldset.campoDivisaoTexto div div{ width: 100%; }
+
+  }
+
+/*Large*/
+@media screen and (min-width: 1200px){
+
+}
